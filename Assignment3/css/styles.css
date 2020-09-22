@@ -2,10 +2,6 @@
     border-bottom: solid 1px #e6e1e1;
 }
 
-#collapsable-nav {
-    background-color: #f5f1f1;
-}
-
 #sushi, #chicken, #beef{
     background-color: #eaecea;
     margin: 10px 0;
