@@ -15,7 +15,6 @@
     }
 
     ToBuyController.$inject = ['ShoppingListCheckOffService'];
-
     function ToBuyController(ShoppingListCheckOffService) {
         const ListToBuy = this;
         ListToBuy.items = ShoppingListCheckOffService.getItems();
@@ -25,7 +24,6 @@
     }
 
     AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
-
     function AlreadyBoughtController(ShoppingListCheckOffService) {
         const PurchasedList = this;
         PurchasedList.items = ShoppingListCheckOffService.getPurchasedItems();
@@ -42,7 +40,7 @@
             },
             {
                 name: "Eggs",
-                quantity: 12,
+                quantity: 3,
                 pricePerItem: 3.25
             },
             {
@@ -53,17 +51,17 @@
             {
                 name: "Sugar",
                 quantity: 1,
-                pricePerItem: 2.00
+                pricePerItem: 3.00
             },
             {
                 name: "Coffee",
                 quantity: 1,
-                pricePerItem: 15.00
+                pricePerItem: 3.00
             },
             {
                 name: "Donuts",
                 quantity: 12,
-                pricePerItem: 14.00
+                pricePerItem: 1.00
             }
         ];
 
