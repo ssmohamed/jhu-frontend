@@ -1,0 +1,12 @@
+<div class="container">
+    <h3 ng-hide="myInfoCtrl.UserInformation.isFilled">
+        Not signed up yet. <a ui-sref="public.signup">Sign up now!</a>
+    </h3>
+    <div ng-show="myInfoCtrl.UserInformation.isFilled" class="text-center">
+        <div>First Name: {{ myInfoCtrl.UserInformation.firstName }}</div>
+        <div>Last Name: {{ myInfoCtrl.UserInformation.lastName }}</div>
+        <div>Email: {{ myInfoCtrl.UserInformation.email }}</div>
+        <div>Phone Number: {{ myInfoCtrl.UserInformation.phoneNumber }}</div>
+        <div>Favorite Item: {{ myInfoCtrl.UserInformation.menuItem }}</div>
+    </div>
+</div>

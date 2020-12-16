@@ -1,0 +1,46 @@
+<div class="container signup">
+    <div class="row">
+        <form name=signUpForm>
+
+            <div class="row text-center">
+                <div class="mb-4">
+                    <input type="text" placeholder="First Name" ng-model="ctrl.firstName" required>
+                </div>
+                <div class="mb-4">
+                    <input type="text" placeholder="Last Name" ng-model="ctrl.lastName" required>
+                </div>
+                <div class="mb-4">
+                    <input type="text" placeholder="Email"
+                           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                           name="email" ng-model="ctrl.email" required>
+                    <div ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
+                        Invalid email address format
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <input type="text" placeholder="###-###-####"
+                           name="phone" pattern="(\d{3})-(\d{3})-(\d{4})"
+                           ng-model="ctrl.phoneNumber" required>
+                    <div ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
+                        Invalid Phone number format
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <input type="text" placeholder="Favorite Item"
+                           ng-blur="ctrl.getShortName();"
+                           name="favItem" ng-model="ctrl.menuItem" required>
+                    <div ng-if="ctrl.isInvalidShortName">
+                        No such menu number exists
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <button ng-disabled="signUpForm.$invalid" ng-click="ctrl.submit();">
+                        Submit
+                    </button>
+                </div>
+                <div ng-if="ctrl.isFilled">Your information has been saved</div>
+            </div>
+        </form>
+
+    </div>
+</div>
