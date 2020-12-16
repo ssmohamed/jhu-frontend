@@ -4,10 +4,10 @@
 
             <div class="row text-center">
                 <div class="mb-4">
-                    <input type="text" placeholder="First Name" ng-model="ctrl.firstName" required>
+                    <input type="text" name="firstName" placeholder="First Name" ng-model="ctrl.firstName" required>
                 </div>
                 <div class="mb-4">
-                    <input type="text" placeholder="Last Name" ng-model="ctrl.lastName" required>
+                    <input type="text" name="lastName" placeholder="Last Name" ng-model="ctrl.lastName" required>
                 </div>
                 <div class="mb-4">
                     <input type="text" placeholder="Email"
@@ -26,9 +26,9 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <input type="text" placeholder="Favorite Item"
+                    <input type="text" placeholder="Favorite Menu Item"
                            ng-blur="ctrl.getShortName();"
-                           name="favItem" ng-model="ctrl.menuItem" required>
+                           name="menuItem" ng-model="ctrl.menuItem" required>
                     <div ng-if="ctrl.isInvalidShortName">
                         No such menu number exists
                     </div>
